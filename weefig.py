@@ -16,11 +16,11 @@ Notes:
     -google search figlet fonts and try them out.
 """
 
-SCRIPT_NAME = "weefig"
-SCRIPT_AUTHOR = "eunderhi"
+SCRIPT_NAME    = "weefig"
+SCRIPT_AUTHOR  = "eunderhi, istewart"
 SCRIPT_VERSION = "0.1"
 SCRIPT_LICENSE = "GPL3"
-SCRIPT_DESC = "Prints figlet text"
+SCRIPT_DESC    = "Prints figlet text"
 SCRIPT_COMMAND = "fig"
 
 try:
@@ -42,22 +42,22 @@ import_ok = True
 
 COLORS = ["\x0305","\x0304","\x0307","\x0303","\x0302","\x0313","\x0306","\x0317","\x0301","\x0300"]
 THEMES = {
-        "black":[8],
-        "white":[9],
-        "red":[0],
-        "orange":[1],
-        "yellow":[2],
-        "green":[3],
-        "blue":[4],
-        "indigo":[5],
-        "violet":[6],
+        "black"  :[8],
+        "white"  :[9],
+        "red"    :[0],
+        "orange" :[1],
+        "yellow" :[2],
+        "green"  :[3],
+        "blue"   :[4],
+        "indigo" :[5],
+        "violet" :[6],
         "rainbow":[0,2,3,4,5,6],
-        "royal":[2,6],
-        "tiger":[8,1],
-        "zebra":[8,9],
-        "canada":[0,9],
+        "royal"  :[2,6],
+        "tiger"  :[8,1],
+        "zebra"  :[8,9],
+        "canada" :[0,9],
         "america":[4,9,0],
-        "":[7]
+        ""       :[7]
         }
 
 def weefig_command_cb(data, buffer, args):
