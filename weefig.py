@@ -40,9 +40,10 @@ except ImportError, message:
 
 import_ok = True
 
-COLORS = ["\x0305","\x0304","\x0307","\x0303","\x0302","\x0313","\x0306","\x0317","\x0301"]
+COLORS = ["\x0305","\x0304","\x0307","\x0303","\x0302","\x0313","\x0306","\x0317","\x0301","\x0300"]
 THEMES = {
         "black":[8],
+        "white":[9],
         "red":[0],
         "orange":[1],
         "yellow":[2],
@@ -53,6 +54,9 @@ THEMES = {
         "rainbow":[0,2,3,4,5,6],
         "royal":[2,6],
         "tiger":[8,1],
+        "zebra":[8,9],
+        "canada":[0,9],
+        "america":[4,9,0],
         "":[7]
         }
 
