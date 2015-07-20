@@ -52,7 +52,7 @@ THEMES = {
         "blue"   :[4],
         "indigo" :[5],
         "violet" :[6],
-        "rainbow":[0,2,3,4,5,6],
+        "rainbow":[0,1,2,3,4,5,6],
         "royal"  :[2,6],
         "tiger"  :[8,1],
         "zebra"  :[8,9],
