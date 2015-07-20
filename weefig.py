@@ -78,7 +78,7 @@ def weefig_command_cb(data, buffer, args):
             text = " ".join(args[i:])
             break
     text = set_text_font(text, font)
-    text = print_color_text(text, color)
+    print_color_text(text, color)
     return weechat.WEECHAT_RC_OK
 
 def set_text_font(text, font):
