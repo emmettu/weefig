@@ -101,7 +101,7 @@ def print_color_text(text, color):
         print('weefig: illegal color combination: %s,s' % (color),(background))
         return
 
-    for i in range(len(text)):
+    for i in range(len(text) - 1):
         if not text[i].isspace():
             foreground_code = COLORS[color[i%len(color)]]
             background_code = COLORS[background[i%len(background)]][-2:]
