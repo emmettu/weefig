@@ -98,7 +98,7 @@ def print_color_text(text, color):
         color = THEMES[color]
         background = THEMES[background]
     except:
-        print('weefig: illegal color combination: %s,s' % (color),(background))
+        print('weefig: illegal color combination: %s,%s' % (color),(background))
         return
 
     for i in range(len(text) - 1):
