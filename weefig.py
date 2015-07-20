@@ -16,10 +16,8 @@ Notes:
     -google search figlet fonts and try them out.
 """
 
-__author__ = "Ian Stewart-Binks"
-
 SCRIPT_NAME    = "weefig"
-SCRIPT_AUTHOR  = "eunderhi"
+SCRIPT_AUTHOR  = "eunderhi, istewart"
 SCRIPT_VERSION = "0.1"
 SCRIPT_LICENSE = "GPL3"
 SCRIPT_DESC    = "Prints figlet text"
