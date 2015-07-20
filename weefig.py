@@ -1,6 +1,7 @@
 """
 weefig.py
 Emmett Underhill
+emmettu@gmail.com
 0.1
 GPL3
 A script that lets you print massive obnoxious letters.
