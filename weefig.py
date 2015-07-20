@@ -1,6 +1,5 @@
 """
 weefig.py
-Ian Stewart-Binks
 Emmett Underhill
 0.1
 GPL3
@@ -16,6 +15,8 @@ Notes:
     -/fig -c rainbow will turn your text into a rainbow
     -google search figlet fonts and try them out.
 """
+
+__author__ = "Ian Stewart-Binks"
 
 SCRIPT_NAME    = "weefig"
 SCRIPT_AUTHOR  = "eunderhi"
