@@ -43,24 +43,33 @@ import_ok = True
 
 COLORS = ["\x0305","\x0304","\x0307","\x0303","\x0302","\x0313","\x0306","\x0317","\x0301","\x0300"]
 THEMES = {
-        "black"       :[8],
-        "white"       :[9],
-        "red"         :[0],
-        "orange"      :[1],
-        "yellow"      :[2],
-        "green"       :[3],
-        "blue"        :[4],
-        "indigo"      :[5],
-        "violet"      :[6],
-        "rainbow"     :[0,1,2,3,4,5,6],
-        "royal"       :[2,6],
+        "black"       :[[8]],
+        "white"       :[[9]],
+        "red"         :[[0]],
+        "orange"      :[[1]],
+        "yellow"      :[[2]],
+        "green"       :[[3]],
+        "blue"        :[[4]],
+        "indigo"      :[[5]],
+        "violet"      :[[6]],
+        "rainbow"     :[[0],[1],[2],[3],[4],[5],[6]],
+        "rainbow"     :[[0,1,2,3,4,5,6]],
+        "royal"       :[[2,6]],
         "tiger"       :[8,1],
         "zebra"       :[8,9],
         "canada"      :[0,9],
         "america"     :[4,9,0],
         "switzerland" :[0,9],
         "germany"     :[8,0,2],
-        ""            :[7]
+        "chess"       :[
+                        [9,8],
+                        [8,9]
+                       ],
+        "revchess"    :[
+                        [8,9],
+                        [9,8]
+                       ],
+        ""            :[[7]]
         }
 
 def weefig_command_cb(data, buffer, args):
@@ -108,11 +117,16 @@ def print_color_text(text, color):
         return
 
     for i in range(len(text) - 1):
-        if not text[i].isspace():
-            foreground_code = COLORS[color[i%len(color)]]
-            background_code = COLORS[background[i%len(background)]][-2:]
-            complete_code = foreground_code + "," + background_code
-            weechat.command("",complete_code+text[i])
+        line = ""
+        for j in range(len(text[i])):
+            foreground_code = COLORS[color[i%len(color)][j%len(color[i%len(color)])]]
+            background_code = COLORS[background[i%len(background)][j%len(background[i%len(color)])]][-2:]
+            line += foreground_code + "," + background_code + text[i][j]
+            stuff = foreground_code
+            if j%20 == 19:
+                line += "\n"
+        weechat.command("",line)
+
 
 if __name__ == '__main__' and import_ok:
     if weechat.register(SCRIPT_NAME, SCRIPT_AUTHOR, SCRIPT_VERSION,
