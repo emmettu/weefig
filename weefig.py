@@ -34,7 +34,7 @@ except ImportError:
 try:
     import re
     import collections
-    from pyfiglet import Figlet
+    from pyfiglet import Figlet, FigletFont
 except ImportError, message:
     print('Missing package(s) for %s: %s' % (SCRIPT_NAME, message))
     import_ok = False
@@ -77,6 +77,9 @@ def weefig_command_cb(data, buffer, args):
         elif args[i] == "-c":
             color = args[i+1]
             i+=2
+        elif args[i] == "--font-list":
+            weechat.prnt("","\n".join(FigletFont.getFonts()))
+            i+=1
         else:
             text = " ".join(args[i:])
             break
