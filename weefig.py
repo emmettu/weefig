@@ -64,12 +64,12 @@ THEMES = {
                         [6,5,4,3,2,1,0],
                        ],
         "royal"       :[[2,6]],
-        "tiger"       :[8,1],
-        "zebra"       :[8,9],
-        "canada"      :[0,9],
-        "america"     :[4,9,0],
-        "switzerland" :[0,9],
-        "germany"     :[8,0,2],
+        "tiger"       :[[8,1]],
+        "zebra"       :[[8,9]],
+        "canada"      :[[0,9]],
+        "america"     :[[4,9,0]],
+        "switzerland" :[[0,9]],
+        "germany"     :[[8,0,2]],
         "chess"       :[
                         [9,8],
                         [8,9]
