@@ -41,7 +41,7 @@ except ImportError, message:
 
 import_ok = True
 
-COLORS = ["\x0305","\x0304","\x0307","\x0303","\x0302","\x0313","\x0306","\x0317","\x0301","\x0300"]
+COLORS = ["\x0305","\x0304","\x0307","\x0303","\x0302","\x0313","\x0306","","\x0301","\x0300"]
 THEMES = {
         "black"       :[[8]],
         "white"       :[[9]],
@@ -118,10 +118,14 @@ def print_color_text(text, color):
 
     for i in range(len(text) - 1):
         line = ""
+        if text[i][0] == "/":
+            text[i] = "/" + text[i]
         for j in range(len(text[i])):
             foreground_code = COLORS[color[i%len(color)][j%len(color[j%len(color)])]]
             background_code = COLORS[background[i%len(background)][j%len(background[j%len(background)])]][-2:]
-            line += foreground_code + "," + background_code + text[i][j]
+            if background_code != "":
+                foreground_code += ","
+            line += foreground_code + background_code + text[i][j]
         weechat.command("",line)
 
 
