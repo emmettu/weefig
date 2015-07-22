@@ -52,8 +52,17 @@ THEMES = {
         "blue"        :[[4]],
         "indigo"      :[[5]],
         "violet"      :[[6]],
-        "rainbow"     :[[0],[1],[2],[3],[4],[5],[6]],
-        "rainbow"     :[[0,1,2,3,4,5,6]],
+        "hrainbow"    :[[0],[1],[2],[3],[4],[5],[6]],
+        "vrainbow"    :[[0,1,2,3,4,5,6]],
+        "drainbow"    :[
+                        [0,1,2,3,4,5,6],
+                        [6,0,1,2,3,4,5],
+                        [5,6,0,1,2,3,4],
+                        [4,5,6,0,1,2,3],
+                        [3,4,5,6,0,1,2],
+                        [2,3,4,4,6,0,1],
+                        [1,2,3,4,5,6,0]
+                       ],
         "royal"       :[[2,6]],
         "tiger"       :[8,1],
         "zebra"       :[8,9],
@@ -119,12 +128,9 @@ def print_color_text(text, color):
     for i in range(len(text) - 1):
         line = ""
         for j in range(len(text[i])):
-            foreground_code = COLORS[color[i%len(color)][j%len(color[i%len(color)])]]
-            background_code = COLORS[background[i%len(background)][j%len(background[i%len(color)])]][-2:]
+            foreground_code = COLORS[color[i%len(color)][j%len(color[j%len(color)])]]
+            background_code = COLORS[background[i%len(background)][j%len(background[j%len(background)])]][-2:]
             line += foreground_code + "," + background_code + text[i][j]
-            stuff = foreground_code
-            if j%20 == 19:
-                line += "\n"
         weechat.command("",line)
 
 
