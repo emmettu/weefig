@@ -17,19 +17,19 @@ Adds figlet capabilities to weechat.
 ```
 /fig [-f <font> -c <foreground theme,background theme>] text
 ```
--An example being 
+An example being 
 ```
 /fig -f larry3d -c white,rainbow Hello World
 ```
 This would print Hello World in the larry3d font with white text and a rainbow background.
 
--Additionally, the -f and -c options can be left out if you have no desire to deviate from the standard color or font.
+Additionally, the -f and -c options can be left out if you have no desire to deviate from the standard color or font.
 ```
 /fig Hello World
 ```
 Would print Hello World in the standard font and the standard color for your client.
 
--Another point of note is that using the "term" font will echo back your text unaltered, therefore, if you just want to color your text you can use:
+Another point of note is that using the "term" font will echo back your text unaltered, therefore, if you just want to color your text you can use:
 ```
 /fig -f term -c <color> <text>
 ```
