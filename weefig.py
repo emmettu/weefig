@@ -128,7 +128,7 @@ def print_color_text(text, color):
     for i in range(len(text) - 1):
         line = ""
         for j in range(len(text[i])):
-            foreground_code = COLORS[color[i%len(color)][j%len(color[j%len(color)])]]
+            foreground_code = COLORS[color[i%len(color)][i%len(color[i%len(color)])]]
             background_code = COLORS[background[i%len(background)][j%len(background[j%len(background)])]][-2:]
             line += foreground_code + "," + background_code + text[i][j]
         weechat.command("",line)
