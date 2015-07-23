@@ -127,7 +127,7 @@ def print_color_text(text, color):
 
     for i in range(len(text) - 1):
         line = ""
-        if text[i][0] == "/":
+        if text[i][0] == "/" and color == [[7]]:
             text[i] = "/" + text[i]
         for j in range(len(text[i])):
             foreground_code = COLORS[color[i%len(color)][j%len(color[j%len(color)])]]
