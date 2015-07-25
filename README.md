@@ -4,10 +4,9 @@
 | | /| / / _ \/ _ \/ /_/ / __ `/
 | |/ |/ /  __/  __/ __/ / /_/ / 
 |__/|__/\___/\___/_/ /_/\__, /  
-                       /____/   
-```
+                       /____/
 Adds figlet capabilities to weechat.
-
+```
 #Installation:
 
 -pip install pyfiglet (if you do not already have the pyfiglet library)
