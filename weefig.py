@@ -87,7 +87,7 @@ THEMES = {
                         [8,9],
                         [9,8]
                        ],
-        "fordgt"      :[
+        "gt40"      :[
                         [4, 4, 1, 1],
                         [1, 4, 4, 1],
                         [1, 1, 4, 4],
@@ -110,7 +110,7 @@ def weefig_command_cb(data, buffer, args):
         elif args[i] == "-c":
             color = args[i+1]
             i+=2
-        elif args[i] == "--font-list":
+        elif args[i] == "--fonts":
             weechat.prnt("","\n".join(FigletFont.getFonts()))
             i+=1
         else:
