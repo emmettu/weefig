@@ -112,7 +112,7 @@ def weefig_command_cb(data, buffer, args):
             i+=2
         elif args[i] == "--fonts":
             weechat.prnt("","\n".join(FigletFont.getFonts()))
-            i+=1
+            break
         else:
             text = " ".join(args[i:])
             break
